@@ -6,7 +6,7 @@
 // Defining an asynchronous handler function called asyncHandler
 const asyncHandler = (requestHandler) => {
     // Returning an anonymous function with req, res, and next parameters
-    (req, res, next) => {
+    return (req, res, next) => {
         // Wrapping the requestHandler function in a Promise to handle asynchronous operations
         // and using Promise.resolve to handle both synchronous and asynchronous code
         Promise.resolve(requestHandler(req, res, next))
